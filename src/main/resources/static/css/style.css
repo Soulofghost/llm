@@ -1,4 +1,4 @@
-/* Retro-OS UI Kit Stylesheet */
+/* Retro-OS UI Kit Stylesheet - Simplified Edition */
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap');
 
 /* Styleguide Variables */
@@ -52,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.02em;
     color: var(--color-black);
     margin-top: 0;
+    margin-bottom: 12px;
 }
 
 h1 { font-size: 36px; }
@@ -140,7 +141,7 @@ p, span, td, th, input, button, select, label {
     text-decoration: none;
     border: var(--border-width) var(--border-style) transparent;
     border-radius: var(--border-radius);
-    transition: all 0.1s ease;
+    transition: all 0.05s ease;
 }
 
 #sidebar .nav-item a:hover {
@@ -288,73 +289,13 @@ header .controls {
     gap: 20px;
 }
 
-/* Card components styled as OS Windows */
+/* Simple Retro Panel Cards (similar to rules card) */
 .glass-panel {
     background-color: var(--color-light-gray);
     border: var(--border-width) var(--border-style) var(--color-black);
     border-radius: var(--border-radius);
-    box-shadow: 3px 3px 0px var(--color-black);
-    overflow: hidden;
-    position: relative;
-    padding: 0 !important; /* Managed by window layouts */
-}
-
-/* Inner padding for window contents */
-.glass-panel > div:not(.window-header) {
-    padding: 20px;
-}
-
-/* Windows Header (Blue top bar) */
-.window-header {
-    background-color: var(--color-blue);
-    color: var(--color-white);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6px 12px;
-    font-family: var(--font-bitmap);
-    font-size: 20px;
-    font-weight: bold;
-    border-bottom: var(--border-width) var(--border-style) var(--color-black);
-    user-select: none;
-}
-
-.window-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.window-controls {
-    display: flex;
-    gap: 4px;
-}
-
-.ctrl-btn {
-    width: 18px;
-    height: 18px;
-    background: var(--color-light-gray);
-    border: var(--border-width) var(--border-style) var(--color-black);
-    border-radius: 2px;
-    color: var(--color-black);
-    font-size: 11px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    user-select: none;
-    box-shadow: inset -1px -1px var(--color-gray), inset 1px 1px var(--color-white);
-}
-
-.ctrl-btn:hover {
-    background: #E0E0E0;
-}
-
-.ctrl-btn:active {
-    box-shadow: inset 1px 1px var(--color-gray), inset -1px -1px var(--color-white);
-    padding-top: 1px;
-    padding-left: 1px;
+    box-shadow: 2px 2px 0px var(--color-black);
+    padding: 24px;
 }
 
 /* Stats Cards Grid */
@@ -369,7 +310,7 @@ header .controls {
     background-color: var(--color-white);
     border: var(--border-width) var(--border-style) var(--color-black);
     border-radius: var(--border-radius);
-    padding: 15px 20px !important; /* Overriding reset */
+    padding: 15px 20px !important;
     box-shadow: 2px 2px 0px var(--color-black);
     display: flex;
     flex-direction: column;
@@ -414,6 +355,7 @@ header .controls {
     border-radius: var(--border-radius);
     overflow: hidden;
     background: var(--color-white);
+    margin-top: 15px;
 }
 
 .custom-table {
@@ -526,7 +468,7 @@ header .controls {
     border: var(--border-width) var(--border-style) var(--color-black);
     color: var(--color-black);
     box-shadow: inset -1px -1px var(--color-gray), inset 1px 1px var(--color-white), 1px 1px 0px var(--color-black);
-    transition: none; /* Instant feedback */
+    transition: none;
 }
 
 .btn:hover {
