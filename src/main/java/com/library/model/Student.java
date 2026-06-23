@@ -36,7 +36,7 @@ public class Student {
 
     @NotBlank
     @Size(max = 50)
-    @Column(nullable = false)
+    @Column(name = "academic_year", nullable = false)
     private String year;
 
     public Student() {
